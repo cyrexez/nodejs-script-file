@@ -8,11 +8,11 @@ http.get('https://jsonplaceholder.typicode.com/posts', res =>{
         body +=data;
     })
     //write the value of body to the post txt
-    res.on('end',()=>fs.writeFile('result/post.txt',body,(err)=>{
+    res.on('end',()=>fs.writeFile('result/posts.txt',body,(err)=>{
         //to throw errors
 if(err) throw err;
 //Confirmation of result
-console.log("Your post file has been created");
+console.log("Your posts file has been created");
     }));
 
 })
